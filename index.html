@@ -152,6 +152,34 @@
         <p>
             The Unity engine provides dynamic tools like procedural terrain generation and an advanced lighting system, perfect for creating tense and immersive environments. Unity allows us to implement mechanics like strategic exploration, realistic physics, and varied light-based gameplay.
         </p>
+	
+	<h3>Stamina System </h3>
+
+<h4>Stamina System (Player Sprinting)</h4>
+<ul>
+    <li>Player stamina is drained while sprinting and regenerates when not sprinting.</li>
+    <li>When stamina reaches zero, the player's running speed is reduced to a "slowed run speed," and regeneration will not start until the player stops sprinting.</li>
+    <li>The stamina UI reflects the remaining stamina and hides itself when stamina is fully regenerated or depleted.</li>
+    <li>Ensure that the `playerStamina`, `maxStamina`, `staminaDrain`, `staminaRegen`, `slowedRunSpeed`, and `normalRunSpeed` values are set appropriately in the inspector or code.</li>
+</ul>
+
+<h3>Enemy Behaviors in unity</h3>
+
+<h4>Enemy Script (Basic Chasing Behavior)</h4>
+<ul>
+    <li>The enemy uses a detection radius to locate the player and starts chasing when the player is detected.</li>
+    <li>The enemy moves in a random direction when not chasing, with a periodic timer to change directions.</li>
+    <li>If the enemy collides with the player during an attack, it will trigger damage and temporarily stop moving.</li>
+    <li>Adjust the `MaxSpeed`, `DetectionRange`, and `KOTime` values as per the gameplay requirements.</li>
+</ul>
+
+<h4>Weeping Angel Enemy (Line-of-Sight Based)</h4>
+<ul>
+    <li>The enemy stops chasing when it is within the player's line of sight (LoS) using the `IsInLineOfSight` method and resumes chasing when out of LoS.</li>
+    <li>If the enemy gets close enough to the player (within the `catchDistance`), it will trigger a "death scene" via the `KillPlayer` coroutine.</li>
+    <li>Adjust the `aiSpeed`, `catchDistance`, and `jumpscareTime` values to fine-tune the chase behavior.</li>
+</ul>
+
 
         <h2>Conclusion</h2>
         <p>
