@@ -47,11 +47,31 @@
             font-weight: bold;
             margin-bottom: 0;
         }
+	.image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
 	.featured-image {
             width: 100%;
+            max-width: 600px; /* Adjust max-width based on desired size */
             height: auto;
             border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            display: inline-block;
+        }
+	.image-gallery {
+            display: flex;
+            flex-wrap: wrap; /* 행에서 넘치면 다음 행에 배치 */
+            justify-content: space-around; /* 이미지 간 간격 */
+            gap: 10px; /* 이미지 간의 간격 */
             margin: 20px 0;
+        }
+        .gallery-image {
+            flex: 1; /* 각 이미지가 동일한 너비를 차지 */
+            min-width: 150px; /* 최소 이미지 너비 */
+            max-width: 30%; /* 전체 너비 중 최대 30% 차지 */
+            height: auto;
+            border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
     </style>
@@ -64,12 +84,19 @@
 
     <div class="content">
         <h2>About the Project</h2>
-	<img src="dark-neko.png" alt="A mysterious and shadowy figure lurking in darkness" class="featured-image">
+	<div class="image-container">
+            <img src="dark-neko.png" alt="A mysterious and shadowy figure lurking in darkness" class="featured-image">
+        </div>
         <p>
             The game concept focuses on navigating through a perilous environment at night, protecting children while evading supernatural monsters. The goal is to reach safety while balancing resources and making strategic decisions to keep the family together.
         </p>
 
         <h2>Story & Hook</h2>
+	 <div class="image-gallery">
+            <img src="concept1.png" alt="Dark Neko Image 1" class="gallery-image">
+            <img src="concept2.jpg" alt="Image 2" class="gallery-image">
+            <img src="collect.png" alt="Image 3" class="gallery-image">
+        </div>
         <ul>
             <li>The main theme revolves around fear and familial bonds, as players must guide children and manage their emotions.</li>
             <li>The family is pursued by supernatural threats and must overcome the dangers of nighttime exploration.</li>
@@ -88,14 +115,23 @@
         </ul>
 
         <h2>Goals & Obstacles</h2>
+<div class="image-container">
+            <img src="bright-neko.png" alt="A mysterious and shadowy figure lurking in darkness" class="featured-image">
+        </div>
         <ul>
             <li><strong>Primary Goal:</strong> Rescue the children and escape safely while avoiding danger.</li>
+
             <li><strong>Obstacles:</strong> Unpredictable monsters, resource scarcity, and treacherous terrain create continuous challenges.</li>
         </ul>
 
         <h2>Monster Mechanics</h2>
         <ul>
+		<div class="image-container">
+            <img src="monster.png" alt="A mysterious and shadowy figure lurking in darkness" class="featured-image">
             <li><strong>Bracken:</strong> A humanoid figure covered in branches that blends with the environment. It ambushes players who wander too close.</li>
+<div class="image-container">
+            <img src="enemy2.png" alt="A mysterious and shadowy figure lurking in darkness" class="featured-image">
+        </div>
             <li><strong>Coil-Head:</strong> An elongated creature with eerie limbs that hypnotizes players with its gaze. Avoid staring too long!</li>
         </ul>
 
